@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterSearch", "TwitterSearch\TwitterSearch.csproj", "{808D9275-DF17-41AF-97A0-A5F8E84C12FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "TwitterCrawler\Model.csproj", "{8CF90CE3-308D-4BED-8FCD-4B8DEFAFBD67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "TwitterRepository\Repository.csproj", "{0E7FE78C-1884-4534-88AF-9C0A041FA342}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitterizer2.Streaming", "Twitterizer2.Streaming\Twitterizer2.Streaming.csproj", "{AFDC57ED-C013-4581-9D06-54D8A42D696D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationLogic", "ApplicationLogic\ApplicationLogic.csproj", "{A81D711C-955D-4958-909F-E7C8AFC9869D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{808D9275-DF17-41AF-97A0-A5F8E84C12FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808D9275-DF17-41AF-97A0-A5F8E84C12FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808D9275-DF17-41AF-97A0-A5F8E84C12FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808D9275-DF17-41AF-97A0-A5F8E84C12FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF90CE3-308D-4BED-8FCD-4B8DEFAFBD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF90CE3-308D-4BED-8FCD-4B8DEFAFBD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF90CE3-308D-4BED-8FCD-4B8DEFAFBD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF90CE3-308D-4BED-8FCD-4B8DEFAFBD67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7FE78C-1884-4534-88AF-9C0A041FA342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7FE78C-1884-4534-88AF-9C0A041FA342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7FE78C-1884-4534-88AF-9C0A041FA342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7FE78C-1884-4534-88AF-9C0A041FA342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDC57ED-C013-4581-9D06-54D8A42D696D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDC57ED-C013-4581-9D06-54D8A42D696D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDC57ED-C013-4581-9D06-54D8A42D696D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDC57ED-C013-4581-9D06-54D8A42D696D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A81D711C-955D-4958-909F-E7C8AFC9869D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A81D711C-955D-4958-909F-E7C8AFC9869D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A81D711C-955D-4958-909F-E7C8AFC9869D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A81D711C-955D-4958-909F-E7C8AFC9869D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

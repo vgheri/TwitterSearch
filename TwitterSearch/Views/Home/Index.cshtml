@@ -1,0 +1,119 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<script type="text/javascript">
+    var urlBase = 'http://twitter.com/';
+    var serviceStarted = false;    
+    var timeOut = 0;
+    var singleTweetMode = true;    
+    var last = 0;
+
+    function run() {
+        if (!serviceStarted) {
+            var value = $('input:text[name=searchKey]').val();
+            if (value == null || value == '') {
+                alert("Please enter a search keyword!");
+                return false;
+            }
+            $('#SearchButton').val('Searching');
+            serviceStarted = true;
+            if (singleTweetMode) {
+                timeOut = window.setInterval(poll, 2000);
+            }
+            else {
+                timeOut = window.setInterval(poll, 10000);
+            }
+            //$('#SearchButton').attr('disabled', 'true');        
+            $.post('/Home/StartSearch', { searchKey: value });
+        }
+    }
+
+    function stop() {
+        if (serviceStarted) {
+            $('#SearchButton').val('Search');
+            $('#StopButton').val('Stopping');
+            window.clearInterval(timeOut);
+            $.post('/Home/StopSearch');
+            $('#StopButton').val('Stop');
+            //$('#SearchButton').attr('disabled', 'false');
+        }            
+    }
+
+    function poll() {
+        $('#LoadingImage').css("display", "inline");
+        $.post('/Home/GetTweets', { lastId: last }, displayNewTweets);
+    }
+
+    function displayNewTweets(data) {
+        $.each(data, function (count, item) {
+            if (last < item.Id) {
+                last = item.Id;
+                addNew(item);
+            }            
+        });
+        $('#LoadingImage').css("display", "none");
+    }
+
+    function addNew(item) { 
+        /*       
+        if ($('#TweetsBody div.tweet').length > 9) {
+            $('#TweetsBody div.tweet:last').toggle(300);
+            $('#TweetsBody div.tweet:last').removeClass('tweet');
+            $('#TweetsBody div:hidden').remove();
+        }*/
+        $('#TweetsBody').prepend(renderTweet(item, 'hidden'));
+    }
+
+    function renderTweet(item) {
+        importanceColor = getImportanceColor(item.NumberOfFollowers);
+        return '<div class="tweet" id="' + item.ID + '">' +                              
+               '<strong><a href="' + urlBase + item.Username + '" style="color:' + importanceColor + '">' +
+               '<img src="' + item.ProfileImageURL + '" class="ProfileImg" alt="Usr image" />' +
+               item.Username + '</a></strong><span class="text">' + ' ' + item.Text +
+               '</span><span class="created_at"><br /><a href="' + urlBase + '#!/' + item.Username + '/status/' + item.ID + '">' +
+               item.Timestamp.toString() + '</span></div>';
+    }
+
+    function getImportanceColor(number) {
+        rgb = 255 - Math.floor(16 * (Math.log(number + 1) + 1));
+        return 'rgb(' + rgb + ', 0, 0)';
+    }
+
+    $(document).ready(function () {
+        $("input:text").focus(function () //focus method will execute when input element got focus            
+        {
+            $("input:text").css("background-color", "#FAD88C"); //when input element got focus backcolor will white   
+            $("input:text").val('');         
+        });
+        $("input:text").blur(function () //when input element lost its focus blur event will raise
+        {
+            $("input:text").css("background-color", "#F2F9FF"); // css will change backcolor of textboxes                     
+        });
+    });
+       
+</script>
+
+<div id="Title">
+    <h1>Twitter RealTime Search</h1>
+</div>
+
+<div id="SearchDiv">    
+    <input type="text" maxlength="30" name="searchKey" id="SearchBar" value="e.g. Italy" />
+    <!--<a href="#" id="RunLink" onclick="run()"><img src="@Url.Content("~/Content/images/Search.png")" height="25px" width="25px" /></a>    -->
+    <input type="button" id="SearchButton" class="button" onclick="run()" value="Search" />
+    <input type="button" id="StopButton" class="button" onclick="stop()" value="Stop" />       
+</div>
+ 
+
+<div id="Tweets">
+    <div id="TweetsHeader">        
+        <strong>Tweets</strong> 
+        <img id="LoadingImage" src="@Url.Content("~/Content/images/Loading.gif")" alt="Retrieving tweets..." />
+    </div>
+    <div id="TweetsBody">
+    </div>
+    <div id="TweetsFooter">
+        <img src="@Url.Content("~/Content/images/twitter-icon.png")" height="30px" width="30px" alt="Twitter icon" />
+        <strong><a href="http://www.twitter.com">Twitter</a></strong>
+    </div>             
+</div>

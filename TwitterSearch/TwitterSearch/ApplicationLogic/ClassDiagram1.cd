@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ApplicationLogic.ModelTranslationService">
+    <Position X="3.75" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>ModelTranslationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApplicationLogic.TwitterAccessService">
+    <Position X="1.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiAAAAAAAAAAAAAMAAAAAAIAAAAAQAAAI=</HashCode>
+      <FileName>TwitterAccessService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApplicationLogic.TwitterStreamingListener">
+    <Position X="6.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEEAAACAAhAAAAARAAAAAAABAAAAQAAAIAAQAAIAAA=</HashCode>
+      <FileName>TwitterStreamingListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,5 @@
+C:\Users\valerio\Desktop\TwitterSearch\Twitterizer2.Streaming\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\valerio\Desktop\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.dll
+C:\Users\valerio\Desktop\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.pdb
+C:\Users\valerio\Desktop\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.dll
+C:\Users\valerio\Desktop\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.pdb

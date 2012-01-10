@@ -1,0 +1,20 @@
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.dll
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.pdb
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\bin\Debug\Newtonsoft.Json.dll
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\bin\Debug\Twitterizer2.pdb
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\bin\Debug\Twitterizer2.xml
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\bin\Debug\Newtonsoft.Json.xml
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.dll
+C:\Users\vgheri\Desktop\Twitterizer-Twitterizer.r496\Twitterizer.r496\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.pdb
+C:\Users\vgheri\Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\vgheri\Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.dll
+C:\Users\vgheri\Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.pdb
+C:\Users\vgheri\Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.dll
+C:\Users\vgheri\Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.pdb
+C:\Users\valerio\Documents\My Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.dll
+C:\Users\valerio\Documents\My Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.pdb
+C:\Users\valerio\Documents\My Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\valerio\Documents\My Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.dll
+C:\Users\valerio\Documents\My Dropbox\Progetti Informatici\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.pdb
