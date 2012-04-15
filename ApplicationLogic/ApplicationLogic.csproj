@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -38,8 +42,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Twitterizer2">
-      <HintPath>..\TwitterSearch\bin\Twitterizer2.dll</HintPath>
+    <Reference Include="Twitterizer2, Version=2.4.0.26532, Culture=neutral, PublicKeyToken=69d1469eac671567, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\twitterizer.2.4.0.26532\lib\net40\Twitterizer2.dll</HintPath>
+    </Reference>
+    <Reference Include="Twitterizer2.Streaming, Version=2.4.0.26649, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\twitterizer-streaming.2.4.0.26649\lib\net40\Twitterizer2.Streaming.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -53,10 +62,6 @@
       <Project>{8CF90CE3-308D-4BED-8FCD-4B8DEFAFBD67}</Project>
       <Name>Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Twitterizer2.Streaming\Twitterizer2.Streaming.csproj">
-      <Project>{AFDC57ED-C013-4581-9D06-54D8A42D696D}</Project>
-      <Name>Twitterizer2.Streaming</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TwitterRepository\Repository.csproj">
       <Project>{0E7FE78C-1884-4534-88AF-9C0A041FA342}</Project>
       <Name>Repository</Name>
@@ -64,6 +69,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GettingStarted.txt" />
+    <Content Include="Json.NET.license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

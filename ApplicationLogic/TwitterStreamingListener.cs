@@ -99,7 +99,7 @@ namespace ApplicationLogic
 
         void OtherEvent(TwitterStreamEvent e)
         {
-            this._otherEvents.Add(e.EventType);            
+            this._otherEvents.Add(e.EventType.ToString());            
         }        
     }
 }

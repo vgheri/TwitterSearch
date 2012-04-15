@@ -1,6 +1,13 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+
+@if (false)
+{
+    <script src="../../Scripts/knockout.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-1.7.1-vsdoc.js" type="text/javascript"></script>
+}
+
 <script type="text/javascript">
     var urlBase = 'http://twitter.com/';
     var serviceStarted = false;    
@@ -45,13 +52,24 @@
     }
 
     function displayNewTweets(data) {
+        /*
         $.each(data, function (count, item) {
             if (last < item.Id) {
                 last = item.Id;
                 addNew(item);
             }            
         });
-        $('#LoadingImage').css("display", "none");
+        */
+        if (data != null && data.length > 0) {
+            $.each(data, function (count, item) {
+                if (last < item.Id) {
+                    last = item.id;
+                    var tweet = new Tweet(item);
+                    viewModel.tweets.push(tweet);
+                }
+            });
+            $('#LoadingImage').css("display", "none");
+        }
     }
 
     function addNew(item) { 
@@ -79,18 +97,35 @@
         return 'rgb(' + rgb + ', 0, 0)';
     }
 
+    function Tweet(tweet) {
+        var self = this;
+        self.id = ko.observable(tweet.Id);
+        self.username = ko.observable(tweet.Username);
+        self.profileImageURL = ko.observable(tweet.ProfileImageURL);
+        self.text = ko.observable(tweet.Text);
+        self.timestamp = ko.observable(tweet.Timestamp);
+        self.numberOfFollowers = tweet.NumberOfFollowers;
+    }
+
+    var viewModel = {
+        tweets: ko.observableArray()
+    };
+
     $(document).ready(function () {
         $("input:text").focus(function () //focus method will execute when input element got focus            
         {
             $("input:text").css("background-color", "#FAD88C"); //when input element got focus backcolor will white   
-            $("input:text").val('');         
+            $("input:text").val('');
         });
         $("input:text").blur(function () //when input element lost its focus blur event will raise
         {
             $("input:text").css("background-color", "#F2F9FF"); // css will change backcolor of textboxes                     
         });
+
+        ko.applyBindings(viewModel);
     });
-       
+
+    
 </script>
 
 <div id="Title">
@@ -110,7 +145,19 @@
         <strong>Tweets</strong> 
         <img id="LoadingImage" src="@Url.Content("~/Content/images/Loading.gif")" alt="Retrieving tweets..." />
     </div>
-    <div id="TweetsBody">
+    <div id="TweetsBody" data-bind="foreach: tweets">
+        <div class="tweet" data-bind="visible: $root.tweets.length > 0, attr: { id: Id }">
+            <strong>
+                <a data-bind="text: Username, attr: { href: http://twitter.com/ + Username }">
+                    <img class="ProfileImg" alt="User image" />
+                </a>
+            </strong>
+            <span class="text" data-bind="Text"></span>
+            <span class="created_at">
+                <br />
+                <a data-bind="attr { href: http://twitter.com/ + Username + /status/ + Id }, text: Timestamp }"></a>
+            </span>
+        </div>
     </div>
     <div id="TweetsFooter">
         <img src="@Url.Content("~/Content/images/twitter-icon.png")" height="30px" width="30px" alt="Twitter icon" />

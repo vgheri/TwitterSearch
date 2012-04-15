@@ -3,3 +3,11 @@ C:\Users\valerio\Desktop\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitteri
 C:\Users\valerio\Desktop\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.pdb
 C:\Users\valerio\Desktop\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.dll
 C:\Users\valerio\Desktop\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.pdb
+C:\Users\valerio\Git_Repositories\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.dll
+C:\Users\valerio\Git_Repositories\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Twitterizer2.Streaming.pdb
+C:\Users\valerio\Git_Repositories\TwitterSearch\Twitterizer2.Streaming\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\valerio\Git_Repositories\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.dll
+C:\Users\valerio\Git_Repositories\TwitterSearch\Twitterizer2.Streaming\obj\Debug\Twitterizer2.Streaming.pdb
+C:\Users\valerio\Git_Repositories\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Newtonsoft.Json.dll
+C:\Users\valerio\Git_Repositories\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\valerio\Git_Repositories\TwitterSearch\Twitterizer2.Streaming\bin\Debug\Newtonsoft.Json.xml

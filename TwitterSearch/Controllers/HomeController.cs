@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using Model;
 using ApplicationLogic;
+using TwitterSearch.Utility;
+using Newtonsoft.Json;
 
 namespace TwitterSearch.Controllers
 {
@@ -39,9 +41,10 @@ namespace TwitterSearch.Controllers
         //
         // Ajax: /Home/GetTweets
         [HttpPost]
-        public ActionResult GetTweets(decimal lastId)
+        public JsonNetResult GetTweets(decimal lastId)
         {
-            JsonResult serializedTweets;
+            JsonNetResult serializedTweets = new JsonNetResult();
+            serializedTweets.Formatting = Formatting.Indented;
             if (singleTweetMode)
             {
                 if (ViewBag.Count == null)
@@ -53,7 +56,11 @@ namespace TwitterSearch.Controllers
                     ViewBag.Count++;
                 }
                 var tweet = service.GetTweet(lastId);
-                serializedTweets = Json(tweet);
+                if (tweet.Count == 0)
+                {
+                    tweet = null;
+                }
+                serializedTweets.Data = tweet;
             }
             else
             {
@@ -66,7 +73,11 @@ namespace TwitterSearch.Controllers
                     ViewBag.Count++;
                 }
                 var tweets = service.GetTweets(lastId);
-                serializedTweets = Json(tweets);
+                if (tweets.Count == 0)
+                {
+                    tweets = null;
+                }
+                serializedTweets.Data = tweets;
             }             
             return serializedTweets;
         }
